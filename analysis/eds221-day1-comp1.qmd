@@ -4,4 +4,7 @@ format: html
 editor: visual
 ---
 
-## 
+```{r}
+# use ".." to go back upstream to root directory and then the data file
+energy2 <- read_csv("../data/us_energy.csv")
+```
