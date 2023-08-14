@@ -9,3 +9,25 @@ execute:
 ```{r}
 library(tidyverse)
 ```
+
+## Read in data
+
+```{r}
+# read_csv is better than read.csv
+energy <- read_csv("data/us_energy.csv")
+```
+
+Create a line chart of energy over time, with color based on energy type
+
+```{r}
+names(energy)
+```
+
+```{r}
+ggplot(data = energy, aes(x = year, 
+                          y = quadrillion_btu)) + 
+  geom_line(aes(color = type)) + 
+  theme_minimal() + 
+  labs(x = "Year", 
+       y = "Energy (quadrillion btu)")
+```
