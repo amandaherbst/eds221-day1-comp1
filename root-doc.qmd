@@ -1,0 +1,11 @@
+---
+title: "rootDoc"
+format: html
+editor: visual
+execute: 
+  warning: false
+---
+
+```{r}
+library(tidyverse)
+```
